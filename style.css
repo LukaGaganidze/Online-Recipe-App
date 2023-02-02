@@ -9,11 +9,90 @@ html {
 }
 body {
   font-family: sans-serif;
-  background-color: aqua;
+  background: linear-gradient(to right, #e9851a, #f3bb80);
+  height: 100%;
+  padding: 5rem;
 }
 
+/* NAVIGATION BAR */
 .navigation--bar {
   width: 120rem;
-  background-color: bisque;
+  background-color: #fdf1e6;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  height: 10rem;
+  padding: 0 5rem;
+}
+/* NAVIGATION SEARCH FORM */
+form {
+  display: flex;
+}
+
+.search--input {
+  height: 5rem;
+  border-color: none;
+  width: 35rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 3rem;
+  padding-left: 1rem;
+}
+
+.search--button {
+  transform: translateX(-5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.5s;
+}
+
+.search--button:hover {
+  scale: 1.1;
+}
+
+.button {
+  background: linear-gradient(to right, #e9851a, #f3bb80);
+  color: #fff;
+  font-size: 1.7rem;
+  border: none;
+  height: 5rem;
+  border-radius: 3rem;
+  padding: 1rem 3.4rem;
+  cursor: pointer;
+}
+
+.button--svg {
+  height: 2.4rem;
+}
+
+.recipe--n--bookmarks {
+  display: flex;
+}
+
+.navigation-options {
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 12rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.navigation-options:hover {
+  background-color: #fae4cc;
+}
+
+.navigation--options--text {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.svg {
+  height: 4rem;
+  stroke: #e9851a;
 }
