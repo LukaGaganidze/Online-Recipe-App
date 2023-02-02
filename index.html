@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="images/logo/chef-logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Online Cooking Chef</title>
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navigation--bar">
+      <!-- LOGO -->
+      <img src="images/logo/chef-logo.png" alt="Logo" width="70" />
+      <!-- SEARCH FORM -->
+      <div class="search--box">
+        <form>
+          <input
+            type="text"
+            id="search--input"
+            placeholder="Search over 1,000,000 recipes..."
+          />
+          <button class="button search--button">search</button>
+        </form>
+        <!-- ADD RECIPE -->
+        <div class="navigation-options add--rec">
+          <p class="add--rec--text navigation--options--text">add recipe</p>
+        </div>
+        <!-- BOOKMARKS -->
+        <div class="navigation-options bookmarks">
+          <p class="bookmarks--text navigation--options--text">bookmarks</p>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main--content">
+      <!-- LEFT SIDE RESULTS SIDE-BAR -->
+      <div class="results--side">
+        <div class="section--search--result">
+          <img
+            src="images/logo/chef-logo.png"
+            alt="results pic"
+            class="search--result--img"
+            width="40"
+          />
+          <div class="search--result--description">
+            <p class="search--result--name">Pasta baby</p>
+            <p class="result--author">101 Cooking Books</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE RECIPE SIDE-BAR -->
+      <div class="recipe--side">
+        <!-- RECIPE MAIN IMG -->
+        <img src="images/logo/chef-logo.png" alt="recipe picture" />
+        <h1 class="recipe--name">Pizaa baby!</h1>
+
+        <!--RECIPE HEAD INFO -->
+        <div class="recipe--head--info">
+          <!-- MINUTES INFO -->
+          <div class="minutes--box">
+            <div>(svg)</div>
+            <p class="info--text minutes--num">75</p>
+            <p class="info--text minutes--text">Minutes</p>
+          </div>
+
+          <!-- SERVINGS INFO -->
+          <div class="servings--head--info">
+            <div>(svg)</div>
+            <p class="info--text">4</p>
+            <p class="info--text">Servings</p>
+            <div>
+              <div>(svg)</div>
+              <div>(svg)</div>
+            </div>
+          </div>
+
+          <!-- BOOKMARKS -->
+          <div class="bookmarks--svg">
+            <div>(SVG)</div>
+          </div>
+
+          <div class="recipe--ingredients">
+            <h2 class="recipe--ingredients--header">recipe ingredients</h2>
+            <ul class="recipe--ingredients--list">
+              <li class="recipe--ingredient">
+                <div class="recipe--ing--svg">(SVG)</div>
+                <div class="">(SVG)</div>
+                <div class="recipe--quantity">10</div>
+                <div class="recipe--description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
