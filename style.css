@@ -1,5 +1,5 @@
 /* FS 1.45 rem 1.15rem */
-
+/*  transform: scale(1.07, 1.05) skewX(-15deg); */
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -104,15 +104,17 @@ form {
 
 /* MAIN */
 
+/* main container */
 .main--content {
   display: grid;
   grid-template-columns: 1fr 2fr;
   /* grid-template-rows: 1fr 3fr; */
 }
+
+/* left side (search results) */
 .results--side {
   background-color: #fff;
 }
-
 .section--search--result {
   display: flex;
   background-color: orangered;
@@ -130,9 +132,51 @@ form {
   font-size: 1.5rem;
   font-weight: 600;
 }
+
+/* right side recipe */
 .recipe--side {
   background-color: aqua;
+  position: relative;
+}
+
+/* main img */
+.image-container {
+  background-color: #e9851a;
+  height: 32rem;
+  overflow: hidden;
 }
 .recipe--image {
   width: 100%;
+  opacity: 0.7;
+}
+
+/* recipe header */
+.recipe--name {
+  font-size: 4rem;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  top: 25.8rem;
+  width: 60rem;
+  line-height: 1.2;
+  transform: scale(1.07, 1.05) skewX(-15deg) translateX(-50%);
+}
+
+.recipe--name span {
+  height: 2rem;
+  line-height: 1.5;
+  padding: 1rem 2rem;
+  opacity: 0.9;
+  background: linear-gradient(to right, #e9851a, #f3bb80);
+}
+
+/* RECIPE INFO */
+
+.minutes--box {
+  font-size: 1.65rem;
+}
+.servings--head--info {
+  font-size: 1.65rem;
+}
+.bookmarks--svg {
 }
