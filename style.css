@@ -159,7 +159,7 @@ form {
   top: 25.8rem;
   width: 60rem;
   line-height: 1.2;
-  transform: scale(1.07, 1.05) skewX(-15deg) translateX(-50%);
+  transform: scale(1.07, 1.05) skewX(-15deg) translateX(-48%);
 }
 
 .recipe--name span {
@@ -172,11 +172,42 @@ form {
 
 /* RECIPE INFO */
 
+.minutes--servings--container {
+  display: flex;
+  padding: 8.4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipe--header--svg {
+  height: 3rem;
+}
+
 .minutes--box {
+  display: flex;
+  gap: 1rem;
   font-size: 1.65rem;
+  align-items: center;
+}
+.minutes--tex-number-box {
+  display: flex;
+  gap: 0.3rem;
+}
+.minutes--svg {
+  stroke: black;
 }
 .servings--head--info {
+  display: flex;
+  align-items: center;
   font-size: 1.65rem;
 }
-.bookmarks--svg {
+
+.servings--quantity {
+  display: flex;
+}
+.servings--quantity--plus,
+.servings--quantity--minus {
+  height: 2rem;
+  border: solid black 2px;
+  border-radius: 50%;
 }
