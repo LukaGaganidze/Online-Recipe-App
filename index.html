@@ -25,76 +25,144 @@
 
   <body>
     <!-- NAVIGATION -->
-    <nav class="navigation--bar">
-      <!-- LOGO -->
-      <img src="images/logo/chef-logo.png" alt="Logo" height="70" />
-      <!-- SEARCH FORM -->
+    <div class="container">
+      <nav class="navigation--bar">
+        <!-- LOGO -->
+        <img src="images/logo/chef-logo.png" alt="Logo" height="70" />
+        <!-- SEARCH FORM -->
 
-      <form>
-        <input
-          type="text"
-          class="search--input"
-          placeholder="Search over 1,000,000 recipes..."
-        />
-        <button class="button search--button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="button--svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-            />
-          </svg>
+        <form>
+          <input
+            type="text"
+            class="search--input"
+            placeholder="Search over 1,000,000 recipes..."
+          />
+          <button class="button search--button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="button--svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
 
-          <p>search</p>
-        </button>
-      </form>
-      <!-- RECIPE AND BOOKMARKS -->
-      <div class="recipe--n--bookmarks">
-        <!-- ADD RECIPE -->
-        <div class="navigation-options add--rec">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="add--rec--svg svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
-            />
-          </svg>
+            <p>search</p>
+          </button>
+        </form>
+        <!-- RECIPE AND BOOKMARKS -->
+        <div class="recipe--n--bookmarks">
+          <!-- ADD RECIPE -->
+          <div class="navigation-options add--rec">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="add--rec--svg svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+              />
+            </svg>
 
-          <p class="add--rec--text navigation--options--text">add recipe</p>
+            <p class="add--rec--text navigation--options--text">add recipe</p>
+          </div>
+          <!-- BOOKMARKS -->
+          <div class="navigation-options bookmarks">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="bookmarks--svg svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
+              />
+            </svg>
+            <p class="bookmarks--text navigation--options--text">bookmarks</p>
+          </div>
         </div>
-        <!-- BOOKMARKS -->
-        <div class="navigation-options bookmarks">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="bookmarks--svg svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
+      </nav>
+
+      <!-- MAIN -->
+      <main class="main--content">
+        <!-- LEFT SIDE RESULTS SIDE-BAR -->
+        <div class="results--side">
+          <div class="section--search--result">
+            <img
+              src="images/logo/chef-logo.png"
+              alt="results pic"
+              class="search--result--img"
+              width="70"
             />
-          </svg>
-          <p class="bookmarks--text navigation--options--text">bookmarks</p>
+            <div class="search--result--description">
+              <p class="search--result--name">Pasta baby</p>
+              <p class="result--author">101 Cooking Books</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+
+        <!-- RIGHT SIDE RECIPE SIDE-BAR -->
+        <div class="recipe--side">
+          <!-- RECIPE MAIN IMG -->
+          <img src="images/logo/chef-logo.png" alt="recipe picture" />
+          <h1 class="recipe--name">Pizaa baby!</h1>
+
+          <!--RECIPE HEAD INFO -->
+          <div class="recipe--head--info">
+            <!-- MINUTES INFO -->
+            <div class="minutes--box">
+              <div>(svg)</div>
+              <p class="info--text minutes--num">75</p>
+              <p class="info--text minutes--text">Minutes</p>
+            </div>
+
+            <!-- SERVINGS INFO -->
+            <div class="servings--head--info">
+              <div>(svg)</div>
+              <p class="info--text">4</p>
+              <p class="info--text">Servings</p>
+              <div>
+                <div>(svg)</div>
+                <div>(svg)</div>
+              </div>
+            </div>
+
+            <!-- BOOKMARKS -->
+            <div class="bookmarks--svg">
+              <div>(SVG)</div>
+            </div>
+
+            <div class="recipe--ingredients">
+              <h2 class="recipe--ingredients--header">recipe ingredients</h2>
+              <ul class="recipe--ingredients--list">
+                <li class="recipe--ingredient">
+                  <div class="recipe--ing--svg">(SVG)</div>
+                  <div class="">(SVG)</div>
+                  <div class="recipe--quantity">10</div>
+                  <div class="recipe--description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

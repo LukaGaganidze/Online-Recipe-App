@@ -1,3 +1,5 @@
+/* FS 1.45 rem 1.15rem */
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -12,13 +14,16 @@ body {
   background: linear-gradient(to right, #e9851a, #f3bb80);
   height: 100%;
   padding: 5rem;
+  font-size: 1.15rem;
 }
-
+/*  MAIN CONTAINER */
+.container {
+  width: 120rem;
+  margin: 0 auto;
+}
 /* NAVIGATION BAR */
 .navigation--bar {
-  width: 120rem;
   background-color: #fdf1e6;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,4 +100,36 @@ form {
 .svg {
   height: 4rem;
   stroke: #e9851a;
+}
+
+/* MAIN */
+
+.main--content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* grid-template-rows: 1fr 3fr; */
+}
+.results--side {
+  background-color: #fff;
+}
+
+.section--search--result {
+  display: flex;
+  background-color: orangered;
+  padding: 1.2rem 2rem;
+  gap: 1.4rem;
+}
+.search--result--description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  justify-content: center;
+}
+.search--result--name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.recipe--side {
+  background-color: aqua;
 }
