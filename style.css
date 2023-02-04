@@ -133,3 +133,6 @@ form {
 .recipe--side {
   background-color: aqua;
 }
+.recipe--image {
+  width: 100%;
+}
