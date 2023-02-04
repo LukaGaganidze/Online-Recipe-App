@@ -102,6 +102,18 @@
       <main class="main--content">
         <!-- LEFT SIDE RESULTS SIDE-BAR -->
         <div class="results--side">
+          <div class="section--search--result active--result">
+            <img
+              src="images/logo/chef-logo.png"
+              alt="results pic"
+              class="search--result--img"
+              width="70"
+            />
+            <div class="search--result--description">
+              <p class="search--result--name">Pasta baby</p>
+              <p class="result--author">101 Cooking Books</p>
+            </div>
+          </div>
           <div class="section--search--result">
             <img
               src="images/logo/chef-logo.png"
@@ -112,6 +124,97 @@
             <div class="search--result--description">
               <p class="search--result--name">Pasta baby</p>
               <p class="result--author">101 Cooking Books</p>
+            </div>
+          </div>
+          <div class="section--search--result">
+            <img
+              src="images/logo/chef-logo.png"
+              alt="results pic"
+              class="search--result--img"
+              width="70"
+            />
+            <div class="search--result--description">
+              <p class="search--result--name">Pasta baby</p>
+              <p class="result--author">101 Cooking Books</p>
+            </div>
+          </div>
+          <div class="section--search--result">
+            <img
+              src="images/logo/chef-logo.png"
+              alt="results pic"
+              class="search--result--img"
+              width="70"
+            />
+            <div class="search--result--description">
+              <p class="search--result--name">Pasta baby</p>
+              <p class="result--author">101 Cooking Books</p>
+            </div>
+          </div>
+          <div class="section--search--result">
+            <img
+              src="images/logo/chef-logo.png"
+              alt="results pic"
+              class="search--result--img"
+              width="70"
+            />
+            <div class="search--result--description">
+              <p class="search--result--name">Pasta baby</p>
+              <p class="result--author">101 Cooking Books</p>
+            </div>
+          </div>
+          <div class="section--search--result">
+            <img
+              src="images/logo/chef-logo.png"
+              alt="results pic"
+              class="search--result--img"
+              width="70"
+            />
+            <div class="search--result--description">
+              <p class="search--result--name">Pasta baby</p>
+              <p class="result--author">101 Cooking Books</p>
+            </div>
+          </div>
+
+          <div class="page-orient page-orient-left">
+            <div class="page page--left">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svg svg--page-left"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+                />
+              </svg>
+
+              <p>Page</p>
+              <p class="page--num page--num--left">N</p>
+            </div>
+          </div>
+
+          <div class="page-orient page-orient-right">
+            <div class="page page--right">
+              <p>Page</p>
+              <p class="page--num page--num--left">N</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svg svg--page-right"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
             </div>
           </div>
         </div>
@@ -154,7 +257,7 @@
 
                 <div class="minutes--tex-number-box">
                   <p class="info--text minutes--num">75</p>
-                  <p class="info--text minutes--text">Minutes</p>
+                  <p class="info--text minutes--text">MINUTES</p>
                 </div>
               </div>
 
@@ -175,8 +278,10 @@
                   />
                 </svg>
 
-                <p class="info--text">4</p>
-                <p class="info--text">Servings</p>
+                <div class="servings--number-text-box">
+                  <p class="info--text">4</p>
+                  <p class="info--text">SERVINGS</p>
+                </div>
                 <div class="servings--quantity">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -211,14 +316,14 @@
               </div>
 
               <!-- BOOKMARKS -->
-              <div class="bookmarks--svg">
+              <div class="bookmark--border">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="recipe--header--svg bookmark--svg"
+                  class="recipe--header--svg bookmark--svg clicked"
                 >
                   <path
                     stroke-linecap="round"
@@ -228,20 +333,130 @@
                 </svg>
               </div>
             </div>
+          </div>
 
-            <div class="recipe--ingredients">
-              <h2 class="recipe--ingredients--header">recipe ingredients</h2>
-              <ul class="recipe--ingredients--list">
-                <li class="recipe--ingredient">
-                  <div class="recipe--ing--svg">(SVG)</div>
-                  <div class="">(SVG)</div>
+          <div class="recipe--ingredients">
+            <h2 class="recipe--ingredients--header">RECIPE INGREDIENTS</h2>
+
+            <ul class="recipe--ingredients--list">
+              <li class="recipe--ingredient">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="recipe--ing--svg svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12.75l6 6 9-13.5"
+                  />
+                </svg>
+                <div class="quantity--description-flex">
                   <div class="recipe--quantity">10</div>
                   <div class="recipe--description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur
                   </div>
-                </li>
-              </ul>
-            </div>
+                </div>
+              </li>
+
+              <li class="recipe--ingredient">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="recipe--ing--svg svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12.75l6 6 9-13.5"
+                  />
+                </svg>
+                <div class="quantity--description-flex">
+                  <div class="recipe--quantity">10</div>
+                  <div class="recipe--description">
+                    Lorem ipsum dolor sit amet consectetur
+                  </div>
+                </div>
+              </li>
+
+              <li class="recipe--ingredient">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="recipe--ing--svg svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12.75l6 6 9-13.5"
+                  />
+                </svg>
+                <div class="quantity--description-flex">
+                  <div class="recipe--quantity">10</div>
+                  <div class="recipe--description">
+                    Lorem ipsum dolor sit amet consectetur
+                  </div>
+                </div>
+              </li>
+
+              <li class="recipe--ingredient">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="recipe--ing--svg svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12.75l6 6 9-13.5"
+                  />
+                </svg>
+                <div class="quantity--description-flex">
+                  <div class="recipe--quantity">10</div>
+                  <div class="recipe--description">
+                    Lorem ipsum dolor sit amet consectetur
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="how--to--cook--box">
+            <p class="how--to--cook-text how--to--cook-header">
+              HOW TO COOK IT
+            </p>
+            <p class="how--to--cook-text">
+              This recipe was carefully designed and tested by Closet Cooking.
+              Please check out directions at their website.
+            </p>
+            <button class="how--to--cook--button button">
+              <p>DIREVTIONS</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="svg svg--footer"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </main>

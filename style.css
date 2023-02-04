@@ -15,9 +15,12 @@ body {
   height: 100%;
   padding: 5rem;
   font-size: 1.15rem;
+  color: #615551;
 }
 /*  MAIN CONTAINER */
 .container {
+  border-radius: 2rem;
+  overflow: hidden;
   width: 120rem;
   margin: 0 auto;
 }
@@ -52,11 +55,11 @@ form {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .search--button:hover {
-  scale: 1.1;
+  scale: 1.03;
 }
 
 .button {
@@ -113,14 +116,28 @@ form {
 
 /* left side (search results) */
 .results--side {
-  background-color: #fff;
+  background-color: #fdf1e6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 0;
+  position: relative;
 }
 .section--search--result {
   display: flex;
-  background-color: orangered;
   padding: 1.2rem 2rem;
   gap: 1.4rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: linear-gradient(to right, #f4c28d, #fdf3e8);
 }
+.section--search--result:hover {
+  transform: translateX(1rem);
+}
+/* .active--result {
+  transform: translateX(1rem);
+  background: linear-gradient(to right, #ed9d48, #fdf3e8);
+} */
 .search--result--description {
   display: flex;
   flex-direction: column;
@@ -133,9 +150,48 @@ form {
   font-weight: 600;
 }
 
+.page-orient {
+  position: absolute;
+  color: #e9851a;
+  bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  border: solid 2px #e9851a;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: min-content;
+
+  border: solid 2px #fdf1e6;
+}
+.page-orient:hover {
+  border-radius: 0;
+  background-color: none;
+  border-bottom: solid 2px #e9851a;
+}
+.page--left,
+.page--right {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+.page-orient-left {
+  left: 2rem;
+}
+.page-orient-right {
+  right: 2rem;
+}
+
+.svg--page-left,
+.svg--page-right {
+  height: 2rem;
+}
+
 /* right side recipe */
 .recipe--side {
-  background-color: aqua;
+  background-color: #fdf1e6;
   position: relative;
 }
 
@@ -147,11 +203,11 @@ form {
 }
 .recipe--image {
   width: 100%;
-  opacity: 0.7;
+  opacity: 0.8;
 }
-
 /* recipe header */
 .recipe--name {
+  color: #fff;
   font-size: 4rem;
   position: absolute;
   left: 50%;
@@ -174,8 +230,8 @@ form {
 
 .minutes--servings--container {
   display: flex;
-  padding: 8.4rem;
-  justify-content: space-between;
+  padding: 8.4rem 0 4rem 0;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -194,20 +250,123 @@ form {
   gap: 0.3rem;
 }
 .minutes--svg {
-  stroke: black;
+  stroke: #e9851a;
 }
+
 .servings--head--info {
   display: flex;
+  gap: 1rem;
   align-items: center;
   font-size: 1.65rem;
 }
 
+.servings--number-text-box {
+  display: flex;
+  gap: 0.3rem;
+}
 .servings--quantity {
   display: flex;
+  gap: 0.4rem;
+}
+.serving--svg {
+  stroke: #e9851a;
 }
 .servings--quantity--plus,
 .servings--quantity--minus {
+  stroke: #e9851a;
   height: 2rem;
-  border: solid black 2px;
+  border: solid #e9851a 2px;
   border-radius: 50%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.servings--quantity--plus:hover,
+.servings--quantity--minus:hover {
+  transform: translateY(-2px);
+}
+
+.bookmark--border {
+  border: solid;
+  border-radius: 50%;
+  background-color: #e9851a;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.bookmark--border:hover {
+  transform: scale(1.1);
+}
+.bookmark--svg {
+  fill: #e9851a;
+  stroke: #fff;
+  margin: 1rem;
+}
+
+/* RECIPE INGREDIENTS */
+.recipe--ingredients {
+  font-size: 1.4rem;
+  padding: 4rem 0;
+  background-color: #fef5ee;
+}
+.recipe--ingredients--header {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 2.5rem;
+}
+
+.recipe--ingredients--list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 2rem;
+}
+.recipe--ingredient {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.recipe--ing--svg {
+  height: 2.3rem;
+}
+
+.quantity--description-flex {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* HOW TO COOK */
+.how--to--cook-text {
+  text-align: center;
+  font-size: 1.7rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  color: #918581;
+}
+
+.how--to--cook--box {
+  padding: 4rem 8rem;
+  background-color: #fffcfa;
+}
+
+.how--to--cook--button {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  transition: all 0.2s;
+}
+.how--to--cook--button:hover {
+  transform: scale(1.03);
+}
+
+.svg--footer {
+  height: 2rem;
+  stroke: #fff;
+}
+
+.how--to--cook-header {
+  font-size: 2.3rem;
+  font-weight: 600;
 }
