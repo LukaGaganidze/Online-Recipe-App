@@ -19,6 +19,21 @@ body {
 
   position: relative;
 }
+/* REUSABLE */
+
+.hidden {
+  display: none;
+}
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  backdrop-filter: blur(15px);
+}
+
 /*  MAIN CONTAINER */
 .container {
   border-radius: 2rem;
@@ -379,16 +394,6 @@ form {
 /*  */
 /*  */
 
-.blur {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  backdrop-filter: blur(15px);
-}
-
 .add--recipe--popup {
   top: 10%;
   left: 50%;
@@ -437,4 +442,23 @@ form {
 
 .add--recipe--popup--button:hover {
   transform: scale(1.05);
+}
+
+/* ERROR MASSIGE */
+
+.error--messige {
+  position: absolute;
+  background-color: #fff;
+  max-width: 80rem;
+  top: 20%;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 8rem 5rem;
+
+  box-shadow: 0 5px 23px 5px #6155515d;
 }

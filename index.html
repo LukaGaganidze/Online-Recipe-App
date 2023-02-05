@@ -462,9 +462,12 @@
       </main>
     </div>
 
-    <!-- POPUP BACKGROUND -->
-    <div class="popup--background blur"></div>
-    <div class="add--recipe--popup">
+    <!-- POPUP BACKGROUND BLUR -->
+    <div class="popup--background blur hidden"></div>
+
+    <!-- POP UP RECIPE FORM -->
+
+    <div class="add--recipe--popup hidden">
       <form action="submit" class="add--recipe--popup-form">
         <p class="form-header">RECIPE DATA</p>
         <p class="form-header">INGREDIENTS</p>
@@ -531,6 +534,11 @@
 
         <button class="add--recipe--popup--button button">UPLOAD</button>
       </form>
+    </div>
+
+    <!-- ERROR MESSIGE POPUP -->
+    <div class="error--messige hidden">
+      <p>Uploads disabled. Build your application with your own API key ;)</p>
     </div>
   </body>
 </html>
