@@ -21,19 +21,21 @@ const renderSpinner = function (parentel) {
   parentel.insertAdjacentHTML("afterbegin", markup);
 };
 
-const recipe = async function () {
+const showRecipe = async function () {
   try {
+    // current ID
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+
     // render spinner
     renderSpinner(recipeContainer);
 
     // 1)#fff get recipe data
     const response = await fetch(
-      // "https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bca57"
-      "https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886"
+      `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
     );
 
     const data = await response.json();
-
     if (!response.ok)
       throw new Error(`error: ${data.status} / ${response.statusText}`);
 
@@ -49,13 +51,13 @@ const recipe = async function () {
       sourceUrl: recipe.source_url,
       title: recipe.title,
     };
-    console.log(recipe);
+    console.log(recipe.image);
     // 2) #fff render recived data
     const markup = `
     <!-- RECIPE MAIN IMG -->
     <div class="image-container">
       <img
-        src="http://forkify-api.herokuapp.com/images/FlatBread21of1a180.jpg"
+        src="${recipe.image}"
         alt="recipe picture"
         class="recipe--image"
         width="800"
@@ -236,8 +238,10 @@ const recipe = async function () {
   }
 };
 
-recipe();
+// showRecipe();
 
-const test = [1, 2, 3, 4];
+["hashchange", "load"].forEach((event) =>
+  window.addEventListener(event, showRecipe)
+);
 
-test.map((num) => num + 1);
+// console.log();
