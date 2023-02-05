@@ -16,6 +16,8 @@ body {
   padding: 5rem;
   font-size: 1.15rem;
   color: #615551;
+
+  position: relative;
 }
 /*  MAIN CONTAINER */
 .container {
@@ -369,4 +371,39 @@ form {
 .how--to--cook-header {
   font-size: 2.3rem;
   font-weight: 600;
+}
+
+/*  */
+/*  */
+/* POPUP WINDOW */
+/*  */
+/*  */
+
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  backdrop-filter: blur(15px);
+}
+
+.add--recipe--popup {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 100;
+  background-color: white;
+}
+
+.add--recipe--popup-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.add--recipe--popup--button {
+  grid-column: -3 / -1;
+  justify-self: center;
 }
