@@ -354,6 +354,7 @@ form {
 .how--to--cook--button {
   display: flex;
   align-items: center;
+  gap: 1rem;
   margin: 0 auto;
   transition: all 0.2s;
 }
