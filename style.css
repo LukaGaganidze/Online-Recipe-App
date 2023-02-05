@@ -390,20 +390,51 @@ form {
 }
 
 .add--recipe--popup {
-  top: 50%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   position: absolute;
   z-index: 100;
   background-color: white;
+  border-radius: 2rem;
+  box-shadow: 0 5px 23px 5px #6155515d;
 }
 
 .add--recipe--popup-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 2rem;
+  column-gap: 11rem;
+  padding: 5rem;
+}
+
+.form-header {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.rec-form--lable {
+  font-size: 1.5rem;
+  width: 10rem;
+  display: inline-block;
+}
+.rec-form--input {
+  width: 15rem;
+  height: 2.8rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  border-color: #918581;
 }
 
 .add--recipe--popup--button {
+  margin-top: 3rem;
   grid-column: -3 / -1;
   justify-self: center;
+  transition: all 0.3s;
+}
+
+.add--recipe--popup--button:hover {
+  transform: scale(1.05);
 }
