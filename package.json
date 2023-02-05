@@ -2,15 +2,15 @@
   "name": "online-recipe",
   "version": "1.0.0",
   "description": "Redoing projects from Jonas Schmedtmann's Javascript course, to practice my programming skills and get used to working with Git and GitHub.",
-  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LukaGaganidze/Online-Recipe-App.git"
   },
-  "author": "Luka",
+  "author": "Luka Gaganidze",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/LukaGaganidze/Online-Recipe-App/issues"
