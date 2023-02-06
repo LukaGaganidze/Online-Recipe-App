@@ -243,5 +243,3 @@ const showRecipe = async function () {
 ["hashchange", "load"].forEach((event) =>
   window.addEventListener(event, showRecipe)
 );
-
-// console.log();
