@@ -2,10 +2,27 @@ class recipeViev {
   #parentEl = document.querySelector(".recipe--side");
   #data;
 
-  render(data) {
+  renderRecipe(data) {
     this.#data = data;
     this.clearInrHtml();
     this.#parentEl.insertAdjacentHTML("afterbegin", this.markup());
+  }
+
+  renderSpinner() {
+    const markup = `
+        <div class="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+    `;
+    this.clearInrHtml();
+    this.#parentEl.insertAdjacentHTML("afterbegin", markup);
   }
 
   clearInrHtml() {

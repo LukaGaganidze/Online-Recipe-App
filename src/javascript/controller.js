@@ -3,24 +3,6 @@ import "regenerator-runtime/runtime";
 
 import { reciveData, state } from "./model.js";
 import recipeViev from "./view/view.js";
-const recipeContainer = document.querySelector(".recipe--side");
-
-const renderSpinner = function (parentel) {
-  const markup = `
-      <div class="lds-roller">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-  `;
-  parentel.innerHTML = "";
-  parentel.insertAdjacentHTML("afterbegin", markup);
-};
 
 const controlRecipe = async function () {
   try {
@@ -29,13 +11,13 @@ const controlRecipe = async function () {
     if (!id) return;
 
     // render spinner
-    renderSpinner(recipeContainer);
+    recipeViev.renderSpinner();
 
     // 1) RECIPE DATA
     await reciveData(id);
 
     // 2) #fff render recived data
-    recipeViev.render(state.recipe);
+    recipeViev.renderRecipe(state.recipe);
   } catch (err) {
     console.error(err);
   }
