@@ -1,22 +1,17 @@
 import { async } from "regenerator-runtime";
 
+import { getJson } from "./helper.js";
+import { API_URL } from "./config.js";
+// MAIN STATE OBJECT (DINAMIC)
 export const state = {
   recipe: {},
 };
 
+// RECIPE DATA BASED ON ID (on load/hashchange)
 export const reciveData = async function (id) {
   try {
     // #FFF we pass id, so it dinamically changes recipe depending on the recipe link (id)
-
-    // fetch response from API (dinamic)
-    const response = await fetch(
-      `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
-    );
-
-    // data from API
-    const data = await response.json();
-    if (!response.ok)
-      throw new Error(`error: ${data.status} / ${response.statusText}`);
+    const data = await getJson(`${API_URL}${id}`);
 
     // recipe from the API (recipe = data.data.recipe)
     const { recipe } = data.data;
@@ -32,8 +27,9 @@ export const reciveData = async function (id) {
       sourceUrl: recipe.source_url,
       title: recipe.title,
     };
-    console.log(state.recipe);
   } catch (err) {
-    console.error(err);
+    console.error(`MODEL: ${err}`);
   }
 };
+
+console.log(state);

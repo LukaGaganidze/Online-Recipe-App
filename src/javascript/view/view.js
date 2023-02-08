@@ -1,13 +1,16 @@
+import { Fraction } from "fractional";
 class recipeViev {
   #parentEl = document.querySelector(".recipe--side");
   #data;
 
+  // get current data / clear innerHTML / render narkup
   renderRecipe(data) {
     this.#data = data;
-    this.clearInrHtml();
-    this.#parentEl.insertAdjacentHTML("afterbegin", this.markup());
+    this.#clearInrHtml();
+    this.#parentEl.insertAdjacentHTML("afterbegin", this.#markup());
   }
 
+  // clear innrHTML / render spinner
   renderSpinner() {
     const markup = `
         <div class="lds-roller">
@@ -21,15 +24,17 @@ class recipeViev {
           <div></div>
         </div>
     `;
-    this.clearInrHtml();
+    this.#clearInrHtml();
     this.#parentEl.insertAdjacentHTML("afterbegin", markup);
   }
 
-  clearInrHtml() {
+  // clear innerHTML function
+  #clearInrHtml() {
     this.#parentEl.innerHTML = "";
   }
 
-  markup() {
+  // recipe markup
+  #markup() {
     return `
   <div class="image-container">
     <img
@@ -147,8 +152,7 @@ class recipeViev {
   <div class="recipe--ingredients">
     <h2 class="recipe--ingredients--header">RECIPE INGREDIENTS</h2>
     <ul class="recipe--ingredients--list">
-
-    ${this.mapIngrediends()}
+    ${this.#data.ingredients.map((ing) => this.#mapIngrediends(ing)).join("")}
     
       </ul>;
   </div>
@@ -182,10 +186,9 @@ class recipeViev {
   `;
   }
 
-  mapIngrediends() {
-    return this.#data.ingredients
-      .map((ing) => {
-        return `
+  // recipe markup ingredients map
+  #mapIngrediends(ing) {
+    return `
       <li class="recipe--ingredient">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -202,15 +205,15 @@ class recipeViev {
           />
         </svg>
         <div class="quantity--description-flex">
-          <div class="recipe--quantity">${ing.quantity}</div>
+          <div class="recipe--quantity">${
+            ing.quantity ? new Fraction(ing.quantity) : ""
+          }</div>
           <div class="recipe--description">
             ${ing.description}
           </div>
         </div>
       </li>
   `;
-      })
-      .join("");
   }
 }
 

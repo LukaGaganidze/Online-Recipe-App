@@ -19,7 +19,7 @@ const controlRecipe = async function () {
     // 2) #fff render recived data
     recipeViev.renderRecipe(state.recipe);
   } catch (err) {
-    console.error(err);
+    throw err;
   }
 };
 
