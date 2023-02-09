@@ -27,9 +27,8 @@ export const reciveData = async function (id) {
       sourceUrl: recipe.source_url,
       title: recipe.title,
     };
+    console.log(state.recipe);
   } catch (err) {
     console.error(`MODEL: ${err}`);
   }
 };
-
-console.log(state);

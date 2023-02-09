@@ -1,4 +1,5 @@
 import "core-js/stable";
+import { async } from "regenerator-runtime";
 import "regenerator-runtime/runtime";
 
 import { reciveData, state } from "./model.js";
@@ -15,7 +16,6 @@ const controlRecipe = async function () {
 
     // 1) RECIPE DATA
     await reciveData(id);
-
     // 2) #fff render recived data
     recipeViev.renderRecipe(state.recipe);
   } catch (err) {
@@ -25,6 +25,11 @@ const controlRecipe = async function () {
 
 // controlRecipe();
 
-["hashchange", "load"].forEach((event) =>
-  window.addEventListener(event, controlRecipe)
-);
+const init = function () {
+  recipeViev.addHandlerRender(controlRecipe);
+};
+
+init();
+// ["hashchange", "load"].forEach((event) =>
+//   window.addEventListener(event, controlRecipe)
+// );

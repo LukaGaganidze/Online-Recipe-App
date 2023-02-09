@@ -3,6 +3,12 @@ class recipeViev {
   #parentEl = document.querySelector(".recipe--side");
   #data;
 
+  addHandlerRender(handler) {
+    ["hashchange", "load"].forEach((event) =>
+      window.addEventListener(event, handler)
+    );
+  }
+
   // get current data / clear innerHTML / render narkup
   renderRecipe(data) {
     this.#data = data;
